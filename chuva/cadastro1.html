@@ -1,0 +1,52 @@
+
+<!-- <?php
+    if(isset($_POST['submit'])){
+    include_once('config.php');
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $senha = $_POST['senha'];
+    $conf_senha = $_POST['conf_senha'];
+
+    $result = mysqli_query($conexao,"INSERT INTO cadastro1(nome,email,telefone,senha,conf_senha) VALUES ('$nome','$email','$telefone','$senha','$conf_senha') ");
+
+
+    }   
+?> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="styles/estilo cad.css">
+</head>
+<body>
+    <nav>
+        <ul>
+        <li><a href="elementos.html">elementos de dragon ball</a></li>
+        <li><a href="midias.html">adaptações</a></li>
+        <li><a href="producao.html">inicio da obra</a></li>
+        <li><a href="tematicas.html">temas</a></li>
+        <li><a href="cadastro1.html">cadastro</a></li>
+        <li><a href="login.html">login</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h2>Cadastro</h2>
+        <form action="cadastro1.php" method="post">
+            <input type="text" name="nome" id="nome" placeholder="Usuário" required><br>
+            <input type="email" name="email" id="email" placeholder="E-mail" required><br>
+            <input type="tel" name="telefone" id="telefone" placeholder="telefone" required><br>
+            <input type="password" name="senha" id="senha" placeholder="Senha" required><br>
+            <input type="password" name="conf_senha" id="conf_senha" placeholder="conf_senha" required><br>
+            <button type="submit" name="submit" class="submit">Cadastrar</button>
+
+            
+            <a href="login.php" class="btn" name= "submit">Faça Login</button>
+
+        </form>
+    </div>
+</body>
+</html>
